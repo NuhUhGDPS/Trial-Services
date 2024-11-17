@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="js.js">
+    <title>Product Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .product-catalog {
+            width: 90%;
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+            cursor: pointer;
+        }
+        .product:last-child {
+            border-bottom: none;
+        }
+        .product img {
+            width: 70px;
+            height: 70px;
+            margin-right: 15px;
+            border-radius: 5px;
+        }
+        .product span {
+            font-size: 18px;
+            color: #555;
+        }
+        #product-form {
+            width: 90%;
+            max-width: 800px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            display: none;
+        }
+        .description {
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .view-cart {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .view-cart:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select one of the best Trial Selections we have to offer.</h1>
+
+    <div class="product-catalog">
+        <h2>Available Products</h2>
+        <div class="product" onclick="selectProduct('1 Trial', '1 Trial will cost T-Rex/ Mammoth AND spirit (worth 20m).')">
+            <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/3/32/Race_v4_%28Full_Version%29.gif?cb=20240911035957" alt="Race v4 GIF">
+            <span>1 Trial</span>
+        </div>
+        <div class="product" onclick="selectProduct('2 Trials', '2 Trials will cost Dough and above.')">
+            <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/3/32/Race_v4_%28Full_Version%29.gif?cb=20240911035957" alt="Race v4 GIF">
+            <span>2 Trials</span>
+        </div>
+        <div class="product" onclick="selectProduct('3+ Trials', '3+ Trials will cost you 2 T-Rex/ 2 Dough/ 2 Leopards/ Kitsune. Also depends on how many trials you need/want.')">
+            <img src="https://static.wikia.nocookie.net/roblox-blox-piece/images/3/32/Race_v4_%28Full_Version%29.gif?cb=20240911035957" alt="Race v4 GIF">
+            <span>3+ Trials</span>
+        </div>
+    </div>
+
+    <div id="product-form">
+        <h2>Trial Info</h2>
+        <p id="selected-product-name">Product: <strong></strong></p>
+        <p class="description" id="product-description"></p>
+    </div>
+
+    <button class="view-cart" onclick="window.location.href='home-p.html'">Go to Home Page</button>
+
+    <script>
+        function selectProduct(name, description) {
+            // Update selected product name
+            document.getElementById('selected-product-name').querySelector('strong').innerText = name;
+            // Update product description
+            document.getElementById('product-description').innerText = description;
+            // Show the order form
+            document.getElementById('product-form').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+.product {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    text-align: center;
+}
+
+.product-description {
+    font-size: 0.9em;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    line-height: 1.5;
+}
